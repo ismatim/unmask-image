@@ -28,11 +28,9 @@ try:
         n=1,
     )
 
-    # 4. Get the URL from the response
     image_url = response.data[0].url
     print(f"🔗 Image generated at: {image_url}")
 
-    # 5. Download the image via requests
     print(f"📥 Downloading and saving to {output_file}...")
     img_data = requests.get(image_url).content
 
